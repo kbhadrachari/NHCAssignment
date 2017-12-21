@@ -1,0 +1,36 @@
+{
+  "name": "makereservation",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "test": "mocha  test/reservation.test.js --reporter spec --recursive --exit",
+    "testc": "mocha test/controller.test.js"
+  },
+  "dependencies": {
+    "asyn": "0.0.1",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-validator": "^4.3.0",
+    "jade": "~1.11.0",
+    "mongoose": "^4.13.7",
+    "morgan": "~1.9.0",
+    "properties": "^1.2.1",
+    "properties-reader": "0.0.16",
+    "request": "^2.83.0",
+    "validator": "^9.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5",
+    "mocha": "^4.0.1"
+  },
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
+}
