@@ -1,0 +1,31 @@
+extends layout
+
+block content
+
+  p 
+    h1.text-center Reservation
+   
+     if errors 
+      ul
+        for error in errors
+          li!= error.msg
+   form(method='post', action='/reservation')
+        .input-group
+          p
+            label(for='id') Id:
+            input.form-control(type='text', placeholder='Enter Id', name='id', value=(undefined===reservation ? '' : reservation.id))
+          p
+            label(for='name') Name:
+            input.form-control(type='text', placeholder='Enter Name', name='name', value=(undefined===reservation ? '' : reservation.name))
+          p
+            label(for='hotelName') Hotel Name:
+            input.form-control(type='text', placeholder='Enter Hotel', name='hotelName', value=(undefined===reservation ? '' : reservation.hotelName))
+          p
+            label(for='arrivalDate') Arrival Date:
+            input.form-control(type='Date', placeholder='Enter Arrival Date', name='arrivalDate', value=(undefined===reservation ? '' : reservation.arrivalDate))
+          p
+            label(for='departureDate') Departure Date:
+            input.form-control(type='Date', placeholder='Enter Departure Date', name='departureDate', value=(undefined===reservation ? '' : reservation.departureDate))  
+        p         
+        span.input-group-btn
+                input.btn.btn-success(type='submit', value='Make Reservation')
